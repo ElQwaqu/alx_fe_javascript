@@ -1091,7 +1091,7 @@ document.addEventListener('DOMContentLoaded', function () {
     createImportExportControls();
 
     // Create sync controls
-    createSyncControls();
+    syncQuotes();
 
     // Add event listener to new quote button
     document.getElementById('newQuote').addEventListener('click', function () {
@@ -1300,7 +1300,7 @@ function updateSyncStatusDisplay() {
 }
 
 // Function to create sync controls
-function createSyncControls() {
+function syncQuotes() {
     let controlsContainer = document.getElementById('syncControls');
     if (!controlsContainer) {
         controlsContainer = document.createElement('div');
@@ -1373,7 +1373,7 @@ function toggleSync() {
 
     // Re-create sync controls to update the display
     document.getElementById('syncControls').remove();
-    createSyncControls();
+    syncQuotes();
 }
 
 function showConflicts() {
@@ -1453,7 +1453,7 @@ function saveSyncSettings() {
 
     // Re-create sync controls to update the display
     document.getElementById('syncControls').remove();
-    createSyncControls();
+    syncQuotes();
 
     showNotification('Sync settings saved successfully!', 'success');
 }
