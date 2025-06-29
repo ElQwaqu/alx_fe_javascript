@@ -15,7 +15,7 @@ let quotes = [];
 
 // Server sync configuration
 const SERVER_CONFIG = {
-    baseUrl: 'https://jsonplaceholder.typicode.com',
+    baseUrl: 'https://jsonplaceholder.typicode.com/posts',
     syncInterval: 30000, // 30 seconds
     lastSyncTimestamp: null,
     syncEnabled: true,
