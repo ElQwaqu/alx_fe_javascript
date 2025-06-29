@@ -159,6 +159,9 @@ async function syncWithServer() {
 
         showSyncStatus(`Sync completed: ${result.added} added, ${result.conflicts} conflicts resolved`, 'success');
 
+        // Show user notification for successful sync
+        showNotification('Quotes synced with server!', 'success');
+
     } catch (error) {
         console.error('Sync error:', error);
         showSyncStatus('Sync failed: ' + error.message, 'error');
