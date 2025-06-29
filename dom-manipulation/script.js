@@ -816,7 +816,7 @@ function showQuoteByCategory() {
 }
 
 // JSON Import/Export Functions
-function exportQuotesToJson() {
+function exportToJsonFile() {
     try {
         const dataStr = JSON.stringify(quotes, null, 2);
         const blob = new Blob([dataStr], { type: 'application/json' });
@@ -1110,7 +1110,7 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleAddQuoteForm();
         } else if (event.ctrlKey && event.key === 'e') {
             event.preventDefault();
-            exportQuotesToJson();
+            exportToJsonFile();
         } else if (event.ctrlKey && event.key === 's') {
             event.preventDefault();
             showStorageStats();
@@ -1201,14 +1201,14 @@ function createImportExportControls() {
         controlsContainer.innerHTML = `
             <h3 style="margin-top: 0; color: #495057;">📁 Data Management</h3>
             <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;">
-                <button onclick="exportQuotesToJson()" 
+                <button onclick="exportToJsonFile()" 
                         style="background: #17a2b8; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
-                    📤 Export JSON
+                    📤 Export Quotes
                 </button>
                 
                 <label for="importFile" 
                        style="background: #28a745; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; display: inline-block;">
-                    📥 Import JSON
+                    📥 Import Quotes
                 </label>
                 <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" style="display: none;" />
                 
