@@ -172,6 +172,14 @@
         <button id="exportQuotes" onclick="exportToJsonFile()">📁 Export Quotes</button>
     </div>
     
+    <!-- Import file input -->
+    <div style="text-align: center; margin: 20px 0;">
+        <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" style="display: none;" />
+        <label for="importFile" style="background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; display: inline-block;">
+            📥 Import Quotes
+        </label>
+    </div>
+    
     <div class="feature-list">
         <h3>✨ Enhanced Features with Server Sync</h3>
         <ul>

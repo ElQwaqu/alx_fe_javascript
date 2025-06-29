@@ -1206,12 +1206,6 @@ function createImportExportControls() {
                     📤 Export Quotes
                 </button>
                 
-                <label for="importFile" 
-                       style="background: #28a745; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; display: inline-block;">
-                    📥 Import Quotes
-                </label>
-                <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" style="display: none;" />
-                
                 <button onclick="showStorageStats()" 
                         style="background: #6c757d; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
                     📊 Storage Stats
